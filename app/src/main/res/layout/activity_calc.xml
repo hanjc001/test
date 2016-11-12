@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculator"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:background="#e99143"/>
+
+    <EditText
+        android:id="@+id/et_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Number"
+        android:paddingTop="50dp"/>
+
+    <EditText
+        android:id="@+id/et_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Second Number"/>
+
+    <Button
+        android:id="@+id/bt_plus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+"/>
+
+    <Button
+        android:id="@+id/bt_minus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-"/>
+
+    <Button
+        android:id="@+id/bt_mul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*"/>
+
+    <Button
+        android:id="@+id/bt_div"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="/"/>
+
+    <Button
+        android:id="@+id/bt_mod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="%"/>
+
+    <Button
+        android:id="@+id/bt_equal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="="/>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Result: "
+        android:textColor="#e90d2a"
+        android:paddingTop="20dp"
+        android:textSize="25dp"/>
+
+</LinearLayout>
