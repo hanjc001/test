@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.example.a1027.week151105.calc.CalcActivity;
 import com.example.a1027.week151105.member.JoinActivity;
+import com.example.a1027.week151105.member.LoginActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -21,9 +22,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         bt_calc = (Button) findViewById(R.id.bt_calc);
         bt_join = (Button) findViewById(R.id.bt_join);
+        bt_login = (Button) findViewById(R.id.bt_login);
 
         bt_calc.setOnClickListener(this);
         bt_join.setOnClickListener(this);
+        bt_login.setOnClickListener(this);
 
     }
 
@@ -40,7 +43,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent1 = new Intent(this.getApplicationContext(), JoinActivity.class);
                 this.startActivity(intent1);
                 break;
-
+            case R.id.bt_login:
+                Intent intent2 = new Intent(this.getApplicationContext(), LoginActivity.class);
+                this.startActivity(intent2);
+                break;
         }
     }
 }

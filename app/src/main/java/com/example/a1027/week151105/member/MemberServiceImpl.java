@@ -1,6 +1,7 @@
 package com.example.a1027.week151105.member;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -23,7 +24,16 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public void join(MemberDTO param) {
+        // dao에게 데이터 전달
 
+//        Log.d("JOIN ID ", param.getId());
+//        Log.d("JOIN PW ", param.getPw());
+//        Log.d("JOIN NAME ", param.getName());
+//        Log.d("JOIN E-MAIL ", param.getEmail());
+//        Log.d("JOIN PHONE ", param.getPhone());
+//        Log.d("JOIN ADDR ", param.getAddr());
+
+        dao.insert(param);
     }
 
     @Override
@@ -46,6 +56,13 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public MemberDTO login(MemberDTO param) {
+
+        Log.d("[Login]ServiceImpl ID ", param.getId());
+        Log.d("[Login]ServiceImpl PW ", param.getPw());
+
+        // dao에게 데이터 전달
+        dao.login(param);
+
         MemberDTO member = new MemberDTO();
         return member;
     }
