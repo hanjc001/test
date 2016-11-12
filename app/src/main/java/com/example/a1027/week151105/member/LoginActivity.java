@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.a1027.week151105.R;
 
@@ -38,7 +39,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 MemberDTO params = new MemberDTO();
                 params.setId(et_id.getText().toString());
                 params.setPw(et_pw.getText().toString());
-                service.login(params);
+                //service.login(params);
+
+                if(service.login(params)) {
+                    Toast.makeText(LoginActivity.this, "로그인성공", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(LoginActivity.this, "로그인실패", Toast.LENGTH_LONG).show();
+                }
                 break;
             case R.id.bt_cancel:
                 break;

@@ -54,18 +54,42 @@ public class MemberServiceImpl implements MemberService {
         return list;
     }
 
+//    @Override
+//    public MemberDTO login(MemberDTO param) {
+//
+//        Log.d("[Login]ServiceImpl ID ", param.getId());
+//        Log.d("[Login]ServiceImpl PW ", param.getPw());
+//
+//        MemberDTO member = new MemberDTO();
+//
+//        // dao 리턴값을 받는다.
+//        member = dao.login(param);
+//
+//        return member;
+//    }
+
     @Override
-    public MemberDTO login(MemberDTO param) {
+    public boolean login(MemberDTO param) {
 
         Log.d("[Login]ServiceImpl ID ", param.getId());
         Log.d("[Login]ServiceImpl PW ", param.getPw());
 
-        // dao에게 데이터 전달
-        dao.login(param);
+        boolean flag = false;
+        //MemberDTO member = new MemberDTO();
+        // dao 리턴값을 받는다.
+        //member = dao.login(param);
+        //MemberDTO member = dao.login(param);
+//        if(param.getPw().equals(member.getPw()))
+//            flag = true;
 
-        MemberDTO member = new MemberDTO();
-        return member;
+//        if(param.getPw().equals(dao.login(param).getPw()))
+//            flag = true;
+
+        //param.getPw().equals( dao.login(param).getPw());
+
+        return (param.getPw().equals( dao.login(param).getPw()));
     }
+
 
     @Override
     public void update(MemberDTO param) {
