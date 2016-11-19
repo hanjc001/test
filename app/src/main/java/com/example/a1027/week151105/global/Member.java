@@ -6,7 +6,6 @@ package com.example.a1027.week151105.global;
 
 public class Member {
 
-
     public static final String TABLE = "member";
     public static final String ID = "id";
     public static final String PW = "pw";

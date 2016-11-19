@@ -17,6 +17,7 @@ public interface MemberService {
     public boolean login(MemberDTO param); // read (하나), id, pw 파라미터 필요 -> 암호화를 위해 캡슐에 담아서 전송(인캡슐화)
     //public MemberDTO login(MemberDTO param); // read (하나), id, pw 파라미터 필요 -> 암호화를 위해 캡슐에 담아서 전송(인캡슐화)
     public void update(MemberDTO param); // read
-    public void delete(MemberDTO param); // read
+    //public void delete(MemberDTO param); // read
+    public void delete(String id); // read
 
 }
