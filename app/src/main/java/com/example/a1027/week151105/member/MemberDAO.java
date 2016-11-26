@@ -184,10 +184,13 @@ public class MemberDAO extends SQLiteOpenHelper {
 //        Log.d("DAO PHONE ", param.getPhone());
 //        Log.d("DAO ADDR ", param.getAddr());
 
-//        String sql = "update member set  pw, email, phone, photo, addr where id='"+param.getId()+"';";
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        db.execSQL(sql);
+        String sql = "update member set  pw, email, phone, photo, addr where id='"+param.getId()+"';";
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL(sql);
     };
+
+
+
 
 //    public void delete(MemberDTO param){
 //

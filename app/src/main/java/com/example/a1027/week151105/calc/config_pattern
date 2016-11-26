@@ -1,0 +1,112 @@
+
+--------------------------------
+2016. 11. 26
+--------------------------------
+
+
+DAO는 CRUD를 개념으로 메소드를 작성한다.
+
+
+●Create: INSERT
+
+   (1)String sql = ""; // 객체타입
+   (2)SQLiteDatabase db = this.getWriteableDatabase();
+   (3)db.execSQL(sql);
+
+
+
+●Read: SELECT
+
+   SELECT count(*)     -> return type is Number (숫자형)
+   SELECT * FROM       -> return type is ArrayList (배열형)
+   SELECT * FROM WHERE -> return type is ArrayList (배열형)
+   SELECT * FROM WHERE -> return type is One Instance (하나의 객체)
+
+
+   (1)String sql = ""; // 객체타입
+   (2)SQLiteDatabase db = this.getReadableDatabase();
+   (3)Return instance(객체)
+   (4)Cursor cursor = db.rawQuery(sql, null);
+   return instance(객체)
+
+
+
+●Update: UPDATE
+
+   (1)String sql = ""; // 객체타입
+   (2)SQLiteDatabase db = this.getWriteableDatabase();
+   (3)db.execSQL(sql);
+
+
+
+●Delete: DELETE
+
+   (1)String sql = ""; // 객체타입
+   (2)SQLiteDatabase db = this.getWriteableDatabase();
+   (3)db.execSQL(sql);
+
+
+---------------------------------------------------------------------
+* M(Model) V V M
+
+Model: MovieDTO, MovieSerice, MoiveServiceImpl, MovieDAO
+View:  Activity
+
+
+
+---------------------------------------------------------------------
+
+
+
+// DB는 어플 맨처음 실행될 때 한 번만 생성되어야 한다.
+
+
+
+
+■ Service Method Pattern
+
+   insert:  public void add(Object param); 추가할 대상 파라미터로 지정 (리턴타입 void)
+
+   select:  public int count();
+            public Object findOne(String key);
+            public ArrayList<Object> findBy(Object param);
+	    public ArrayList<Object> list();
+
+   update:  public void update(Object param);
+
+   delete:  public void delete(String Key);
+
+
+
+■ SQL Pattern
+
+Create (테이블 생성)
+
+ insert into table(...) values(...);
+
+Read
+ Read Count: select count(*) from table;
+ Read One: select * from table where column='key';
+ Read Some: select * from where column='search word';  (key값은 아님)
+ Read All: select * from table;
+
+Update
+  update table set column='value', column='value' ... where column='key';
+
+Delete
+  delete from table where column='key';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
